@@ -1,0 +1,24 @@
+// primer ejemplo 
+
+
+// primero debo de preguntarme cuando quiero que se ejecute un workflow
+name: "hola mundo" // nombre del workflow 
+
+
+on: // creadondo un trigger 
+  push: 
+    branches: ["main"] // cuando se haga un push a la rama main se ejecutara el workflow
+
+jobs: // creando jobs
+  deploy-codigo-facilito: // nombre del job
+    runs-on: ubuntu-latest // sistema operativo que se usara para ejecutar el job(maquina virtual)
+    steps: // creando steps 
+      - name: Checkout // nombre del step
+      - uses: actions/checkout@v2 // clonar el codigo y lo va ejecutar en el respositorio de github 
+      - run: echo "Hello World" // comando que se ejecutara (echo es como un console.log)
+
+
+
+  
+
+
